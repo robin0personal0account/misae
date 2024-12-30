@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat - Cats</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ece5dd;
+        }
+
+        .chat-container {
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #ffffff;
+            overflow: hidden;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #075e54;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            margin: 5px 0;
+        }
+
+        .message .pfp {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .message-content {
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+
+        .sent .message-content {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+        }
+
+        .received .message-content {
+            background-color: #ffffff;
+            align-self: flex-start;
+        }
+
+        .footer {
+            display: flex;
+            background: #f0f0f0;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            font-size: 14px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer button {
+            background-color: #075e54;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer button:hover {
+            background-color: #064e48;
+        }
+
+        .pfp.hiroshi {
+            background-image: url('https://i.pinimg.com/736x/52/69/46/526946a2b530d9782671bd43eed8ada6.jpg');
+            background-size: cover;
+        }
+
+        .pfp.misae {
+            background-image: url('https://i.pinimg.com/736x/19/48/23/1948236011ad656bd9b86a04c2c912c5.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <img src="https://i.pinimg.com/736x/19/48/23/1948236011ad656bd9b86a04c2c912c5.jpg" alt="Cat Avatar">
+            <span>Shinchan's Mom (Misae)</span>
+        </div>
+        <div class="messages">
+            <div class="message sent">
+                <div class="pfp misae"></div>
+                <div class="message-content">Meow! Did you find the fish? 🐟</div>
+            </div>
+            <div class="message received">
+                <div class="pfp hiroshi"></div>
+                <div class="message-content">Not yet, Misae! But I saw a tasty bird fly by! 🐦</div>
+            </div>
+            <div class="message sent">
+                <div class="pfp misae"></div>
+                <div class="message-content">Hiroshi! Focus on the fish! We're cats, not bird catchers! 😾</div>
+            </div>
+            <div class="message received">
+                <div class="pfp hiroshi"></div>
+                <div class="message-content">Alright, alright! I'll bring the best fish for my queen. 🐱👑</div>
+            </div>
+            <div class="message sent">
+                <div class="pfp misae"></div>
+                <div class="message-content">Good. And don't forget to bring milk and Bournvita too. 🥛🍫</div>
+            </div>
+            <div class="message received">
+                <div class="pfp hiroshi"></div>
+                <div class="message-content">Got it! Fish, milk, and Bournvita on the way! 🐟🥛🍫</div>
+            </div>
+            <div class="message sent">
+                <div class="pfp misae"></div>
+                <div class="message-content">Wait, Hiroshi! You forgot last time too! 😤</div>
+            </div>
+            <div class="message received">
+                <div class="pfp hiroshi"></div>
+                <div class="message-content">Misae, don't be mad! I promise this time it'll be perfect. 🥺</div>
+            </div>
+            <div class="message sent">
+                <div class="pfp misae"></div>
+                <div class="message-content">If you forget, you'll sleep outside! 🐾</div>
+            </div>
+            <div class="message received">
+                <div class="pfp hiroshi"></div>
+                <div class="message-content">Outside?! Nooo, please don't do that! I'll double-check the list! 📝</div>
+            </div>
+            <div class="message sent">
+                <div class="pfp misae"></div>
+                <div class="message-content">Good. Now hurry up before I change my mind. 😼</div>
+            </div>
+            <div class="message received">
+                <div class="pfp hiroshi"></div>
+                <div class="message-content">ok misae❤️🐾</div>
+            </div>
+        </div>
+        <div class="footer">
+            <input type="text" placeholder="Type a message...">
+            <button>Send</button>
+        </div>
+    </div>
+</body>
+</html>
